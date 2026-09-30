@@ -1,0 +1,282 @@
+.hidden {
+  display: none !important;
+}
+.admin-app {
+  min-height: 100vh;
+  background: #f8f6f2;
+  display: flex;
+}
+.sidebar {
+  background: #23212a;
+  color: #fff;
+  width: 255px;
+  min-height: 100vh;
+  padding: 31px 25px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 12;
+  transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sidebar-backdrop,
+.admin-menu-button {
+  display: none;
+}
+.sidebar .brand-mark {
+  color: #23212a;
+}
+.admin-badge {
+  font: 500 9px "DM Mono";
+  letter-spacing: 1px;
+  color: #b5dcc8;
+  border-top: 1px solid #4c4953;
+  margin-top: 55px;
+  padding-top: 22px;
+}
+.sidebar nav {
+  display: grid;
+  gap: 5px;
+  margin-top: 17px;
+}
+.side-link,
+.back-link {
+  background: transparent;
+  border: 0;
+  color: #c1bec7;
+  text-align: left;
+  padding: 12px 10px;
+  cursor: pointer;
+  font: 600 12px Manrope;
+  border-radius: 3px;
+}
+.side-link.active,
+.side-link:hover {
+  background: #383541;
+  color: #fff;
+}
+.back-link {
+  margin-top: auto;
+  color: #b5dcc8;
+  padding-left: 0;
+}
+.admin-content {
+  margin-left: 255px;
+  padding: 65px 7vw;
+  width: calc(100% - 255px);
+  max-width: 1500px;
+}
+.admin-header,
+.panel-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 42px;
+}
+.admin-header h1 {
+  font: 700 46px/0.98 "Playfair Display";
+  letter-spacing: -2px;
+  margin: 0;
+}
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.stat-grid article {
+  background: #fff;
+  padding: 25px;
+  border: 1px solid #e5e1db;
+}
+.stat-grid span {
+  font: 500 9px "DM Mono";
+  letter-spacing: 0.8px;
+  color: #777;
+}
+.stat-grid b {
+  display: block;
+  font: 700 43px "Playfair Display";
+  margin: 8px 0;
+}
+.stat-grid small {
+  font-size: 10px;
+  color: #777;
+}
+.admin-card {
+  background: #fff;
+  border: 1px solid #e5e1db;
+  padding: 25px;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 17px;
+}
+.card-header h3 {
+  margin: 0;
+  font: 700 21px "Playfair Display";
+}
+.quiet-button {
+  background: transparent;
+  border: 0;
+  font: 700 11px Manrope;
+  cursor: pointer;
+}
+.mini-event,
+.manage-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 140px 100px;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+}
+.mini-event:last-child,
+.manage-row:last-child {
+  border: 0;
+}
+.date-box {
+  font: 500 10px "DM Mono";
+  text-align: center;
+  background: #f4eee8;
+  padding: 9px;
+}
+.mini-event strong,
+.manage-row strong {
+  font-size: 12px;
+}
+.mini-event small,
+.manage-row small {
+  display: block;
+  font-size: 10px;
+  color: #777;
+  margin-top: 4px;
+}
+.pill {
+  font: 700 9px Manrope;
+  letter-spacing: 0.3px;
+}
+.row-actions {
+  display: flex;
+  gap: 7px;
+}
+.row-actions button {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+  font: 700 9px Manrope;
+  cursor: pointer;
+}
+.row-actions .delete {
+  color: #b43c3c;
+}
+.registration-tools {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.registration-tools select,
+#eventForm select {
+  border: 1px solid #ddd;
+  background: white;
+  padding: 9px;
+  font: 600 11px Manrope;
+}
+.table-wrap {
+  overflow: auto;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 690px;
+}
+th {
+  text-align: left;
+  font: 500 9px "DM Mono";
+  letter-spacing: 0.8px;
+  color: #777;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+td {
+  font-size: 11px;
+  padding: 15px 10px;
+  border-bottom: 1px solid #eee;
+}
+td small {
+  color: #777;
+  display: block;
+  margin-top: 3px;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(25, 23, 28, 0.62);
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+.modal-card {
+  position: relative;
+  background: var(--paper);
+  width: min(590px, 100%);
+  padding: 42px;
+  max-height: 92vh;
+  overflow: auto;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+}
+.modal-card h2 {
+  font: 700 36px/0.96 "Playfair Display";
+  letter-spacing: -1.4px;
+  margin: 0 0 25px;
+}
+.close {
+  position: absolute;
+  right: 19px;
+  top: 12px;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+form {
+  display: grid;
+  gap: 14px;
+}
+form label {
+  display: grid;
+  gap: 6px;
+  font: 700 10px Manrope;
+}
+form input,
+form textarea,
+form select {
+  background: #fff;
+  border: 1px solid #d9d2c8;
+  padding: 12px;
+  font: 500 12px Manrope;
+  outline-color: var(--violet);
+  width: 100%;
+  resize: vertical;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+.toast {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #23212a;
+  color: #fff;
+  padding: 16px 20px;
+  z-index: 50;
+  font: 600 12px Manrope;
+  box-shadow: 0 10px 30px #0004;
+}
